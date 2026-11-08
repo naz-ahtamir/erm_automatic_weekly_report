@@ -1,0 +1,36 @@
+{
+  "schedule": {
+    "day_of_week": "thursday",
+    "hour": 8,
+    "minute": 0,
+    "timezone": "Asia/Makassar"
+  },
+  "data_sources": {
+    "non_conformity_csv_url": "https://docs.google.com/spreadsheets/d/1vJVOkzRPLIuAWntBHyTFFR4b_95qUggZqVzUYA85R5I/export?format=csv&gid=0",
+    "training_csv_url": "https://docs.google.com/spreadsheets/d/1mglnfdiGn4-mShHS_RO4ul3q7C6bshkJCEPbAc23tL8/export?format=csv&gid=1399125371"
+  },
+  "filters": {
+    "department_keyword": "ESG",
+    "non_conformity_type_keywords": [
+      "BAHAYA TERSEMBUNYI",
+      "HAZARD",
+      "隐患"
+    ]
+  },
+  "report": {
+    "template_file": "ERM 印尼安全组周报数据 (6.25-7.1).xlsx",
+    "output_dir": "output",
+    "filename_pattern": "ERM 印尼安全组周报数据 ({start_m}.{start_d}-{end_m}.{end_d}).xlsx",
+    "download_photos": true,
+    "photo_timeout_seconds": 25,
+    "max_concurrent_downloads": 6
+  },
+  "wechat": {
+    "enabled": true,
+    "mode": "desktop",
+    "target_chat": "文件传输助手",
+    "send_summary_text": true,
+    "summary_template": "【ERM 印尼安全组周报数据】\n📅 周期 (Periode): {start_date} s/d {end_date} ({start_m}.{start_d}-{end_m}.{end_d})\n🏢 部门 (Departemen): ESG (ESG后处理 & ESG高压)\n⚠️ 隐患数量 (Temuan Hazard/Bahaya Tersembunyi): {hazard_count}\n📚 安全培训 (Safety Talk/Training): {training_count}\n📎 File laporan terlampir.",
+    "webhook_url": ""
+  }
+}
